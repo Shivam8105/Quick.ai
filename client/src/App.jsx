@@ -10,6 +10,8 @@ import RemoveObject from './pages/RemoveObject'
 import ReviewResume from './pages/ReviewResume'
 import Community from './pages/Community'
 import SummarizeContent from './pages/SummarizeContent';
+import GeneratePost from './pages/GeneratePost'
+import RemoveBackground from './pages/RemoveBackground'
 
 
 const App = () => {
@@ -23,9 +25,11 @@ const App = () => {
           <Route path='blog-titles' element={<BlogTitles />} />
           <Route path='generate-images' element={<GenerateImages />} />
           <Route path='remove-object' element={<RemoveObject />} />
+          <Route path='remove-background' element={<RemoveBackground />} />
           <Route path='review-resume' element={<ReviewResume />} />
           <Route path='community' element={<Community />} />
           <Route path='summarize-content' element={<SummarizeContent />} />
+          <Route path='generate-post' element={<GeneratePost />} />
         </Route>
       </Routes>
     </div>
