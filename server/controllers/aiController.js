@@ -4,7 +4,7 @@ import { clerkClient } from "@clerk/express";
 import axios from "axios";
 import {v2 as cloudinary} from 'cloudinary'
 import fs from "fs";
-import pdf from "pdf-parse/lib/pdf-parse.js"; 
+
 
 
 const AI = new OpenAI({
@@ -120,7 +120,7 @@ export const generateImage = async (req, res)=>{
         const formData = new FormData()
         formData.append('prompt', prompt)
         const {data} = await axios.post("https://clipdrop-api.co/text-to-image/v1", formData, {
-            headers: {'x-api-key': process.env.SECRET_API_KEY},
+            headers: {'x-api-key': process.env.CLIPDROP_API_KEY},
             responseType: "arraybuffer",
         })
 
