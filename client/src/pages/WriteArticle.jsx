@@ -110,8 +110,6 @@ const WriteArticle = () => {
                 </div>
             </div>
         )}
-        
-
       </div>
     </div>
   )
