@@ -12,9 +12,17 @@ import Community from './pages/Community'
 import SummarizeContent from './pages/SummarizeContent';
 import GeneratePost from './pages/GeneratePost'
 import RemoveBackground from './pages/RemoveBackground'
+import { useAuth } from '@clerk/clerk-react';
+import { useEffect } from 'react'
 
 
 const App = () => {
+
+    const {getToken} = useAuth()
+  useEffect(() => {
+    getToken().then((token) => console.log(token));
+  }, [])
+
   return (
     <div>
       <Routes>
